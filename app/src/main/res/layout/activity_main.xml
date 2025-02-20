@@ -7,7 +7,7 @@
     android:padding="16dp"
     android:background="@color/fondo">
 
-    <!-- Título centrado y más destacado -->
+    <!-- Título -->
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
@@ -21,6 +21,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="8dp"/>
 
+    <!-- FrameLayout redondeado para detrás del botón -->
     <FrameLayout
         android:layout_width="48dp"
         android:layout_height="48dp"
@@ -57,7 +58,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Tarjeta 1 optimizada -->
+        <!-- Tarjeta 1 -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardVideo1"
             android:layout_width="match_parent"
@@ -94,7 +95,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Tarjeta 2 optimizada -->
+        <!-- Tarjeta 2 -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardVideo2"
             android:layout_width="match_parent"
@@ -131,7 +132,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Tarjeta 3 optimizada -->
+        <!-- Tarjeta 3 -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardVideo3"
             android:layout_width="match_parent"

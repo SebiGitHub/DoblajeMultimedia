@@ -2,9 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Permiso para grabar audio mediante el micrófono del dispositivo -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- Permiso para escribir en el almacenamiento externo (guardar archivos) -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Permiso para leer archivos almacenados en el almacenamiento externo -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
 
     <application
         android:allowBackup="true"

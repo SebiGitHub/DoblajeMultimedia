@@ -7,7 +7,7 @@
     android:padding="16dp"
     android:background="@color/fondo">
 
-
+    <!-- Título -->
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
