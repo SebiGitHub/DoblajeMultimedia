@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">DobalejeMultimedia</string>
+    <string name="app_name">DoblajeMultimedia</string>
+    <string name="titulo">Doblaje App</string>
+    <string name="v1">TOY STORY</string>
+    <string name="v2">GATO CON BOTAS</string>
+    <string name="v3">SHREK</string>
+    <string name="start">Start Recording</string>
 </resources>

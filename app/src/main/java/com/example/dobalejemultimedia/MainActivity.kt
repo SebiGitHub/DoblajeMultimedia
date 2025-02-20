@@ -1,5 +1,6 @@
 package com.example.dobalejemultimedia
 
+import android.app.DownloadManager
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
@@ -15,8 +16,8 @@ class MainActivity : AppCompatActivity() {
         // Botón para ir a la carpeta de vídeos (aquí solo mostramos un Toast; implementa lo que necesites)
         val btnFolder: ImageButton = findViewById(R.id.btnFolder)
         btnFolder.setOnClickListener {
-            Toast.makeText(this, "Abrir carpeta de vídeos", Toast.LENGTH_SHORT).show()
-            // Aquí podrías iniciar otra Activity que muestre los vídeos almacenados.
+            val intent = Intent(DownloadManager.ACTION_VIEW_DOWNLOADS)
+            startActivity(intent)
         }
 
         // Configuración de las tarjetas de vídeo

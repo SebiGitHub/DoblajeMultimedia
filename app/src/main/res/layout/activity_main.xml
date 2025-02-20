@@ -4,116 +4,165 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@color/fondo">
 
-    <!-- Título de la app -->
+    <!-- Título centrado y más destacado -->
     <TextView
         android:id="@+id/tvTitle"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Doblaje App"
-        android:textSize="24sp"
+        android:text="@string/titulo"
+        android:textColor="@color/white"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnFolder"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
 
-    <!-- Botón para ir a la carpeta de vídeos -->
-    <!-- Coloca aquí tu icono -->
-    <ImageButton
-        android:id="@+id/btnFolder"
+    <FrameLayout
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:src="@drawable/ic_folder"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/tvTitle"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <!-- Contenedor para las opciones de vídeo -->
+        <!-- Fondo redondeado detrás del botón -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_background"/>
+
+        <!-- Botón de carpeta -->
+        <ImageButton
+            android:id="@+id/btnFolder"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_folder"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+
+    <!-- Contenedor ajustado para 3 tarjetas -->
     <LinearLayout
         android:id="@+id/videoOptionsContainer"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_marginTop="24dp"
         app:layout_constraintTop_toBottomOf="@id/tvTitle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp">
+        app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Tarjeta para vídeo 1 -->
+        <!-- Tarjeta 1 optimizada -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardVideo1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardElevation="4dp">
+            android:layout_marginBottom="12dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="8dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:background="@color/f_video"
+                android:padding="12dp">
+
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="160dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/video1_thumbnail" />
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/video1_thumbnail"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Episodio 1"
-                    android:textSize="18sp"
+                    android:text="@string/v1"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
                     android:layout_marginTop="8dp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Tarjeta para vídeo 2 -->
+        <!-- Tarjeta 2 optimizada -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardVideo2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardElevation="4dp">
+            android:layout_marginBottom="12dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="8dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:background="@color/f_video"
+                android:padding="12dp">
+
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="160dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/video2_thumbnail" />
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/video2_thumbnail"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Episodio 2"
-                    android:textSize="18sp"
+                    android:text="@string/v2"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
                     android:layout_marginTop="8dp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Tarjeta para vídeo 3 -->
+        <!-- Tarjeta 3 optimizada -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardVideo3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardElevation="4dp">
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="8dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:background="@color/f_video"
+                android:padding="12dp">
+
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="160dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/video3_thumbnail" />
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/video3_thumbnail"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Episodio 3"
-                    android:textSize="18sp"
+                    android:text="@string/v3"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
                     android:layout_marginTop="8dp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
