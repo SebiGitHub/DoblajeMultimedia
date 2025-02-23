@@ -11,6 +11,11 @@
     <!-- Permiso para leer archivos almacenados en el almacenamiento externo -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+    <!-- Permiso para usar la camara, no es obligatorio -->
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
+
+
 
     <application
         android:allowBackup="true"
@@ -22,6 +27,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DobalejeMultimedia"
         tools:targetApi="31">
+
+
+        <!-- Declaro un FileProvider que sirve para compartir archivos de forma segura con otras apps -->
+        <!-- Define el identificador único (authority) que usaremos en el código -->
+        <!-- Evita que el FileProvider sea accesible directamente por otras apps sin permisos adecuados -->
+        <!-- Permite conceder permisos temporales para acceder a los archivos compartidos -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <!-- Configura la ruta de archivos que se podrán compartir, usando el archivo res/xml/file_paths.xml -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+
         <activity
             android:name=".RecordingActivity"
             android:exported="false" />

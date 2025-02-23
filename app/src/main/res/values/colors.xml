@@ -2,8 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="fondo">#18bd84</color>
-    <color name="titulo">#18bd84</color>
-    <color name="f_video">#96fcd9</color>
-
+    <color name="titulo">#61D095</color>
+    <color name="f_video">#B95F89</color>
+    <color name="fondo">#2A4747</color>
+    <color name="f_ico">#48BF84</color>
+    <color name="texto">#FF000000</color>
 </resources>

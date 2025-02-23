@@ -189,7 +189,7 @@ class RecordingActivity : AppCompatActivity() {
     }
 
 
-    @SuppressLint("WrongConstant") // Suprime advertencias de uso incorrecto de constantes (necesario en algunos casos)
+    @SuppressLint("WrongConstant") // Suprime advertencias de uso incorrecto de constantes
     private fun muxAudioAndVideo(
         videoFilePath: String,  // Ruta del archivo de video
         audioFilePath: String,  // Ruta del archivo de audio
