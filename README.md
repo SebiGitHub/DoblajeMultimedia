@@ -15,8 +15,7 @@ Proyecto de práctica orientado a trabajar con contenido multimedia y “doblaje
 - Gestión del ciclo de vida y liberación de recursos
 
 ## Capturas/GIF
-<img width="531" height="1247" alt="x" src="https://github.com/user-attachments/assets/65623d20-604e-45ed-bede-9f2f3f735985" />
-
+https://drive.google.com/file/d/1AIolZRznmCRjnHDT33kwBRUu6qh5jDnI/view?usp=sharing
 
 ## Cómo ejecutar
 1. Clona el repo
